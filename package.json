@@ -11,14 +11,9 @@
   "author": "",
   "license": "ISC",
   "peerDependencies": {
-    "react-native": "^0.70.3",
-    "ethers": "^5.7.2"
+    "react-native": "^0.70.3"
   },
   "devDependencies": {
     "metro-react-native-babel-preset": "^0.73.2"
-  },
-  "dependencies": {
-    "@avvy/client": "^2.5.7",
-    "react-native-webview": "^11.23.1"
   }
 }

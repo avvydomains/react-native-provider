@@ -56,3 +56,8 @@ class App extends React.Component {
 }
 
 ```
+
+
+# Project Structure
+
+The javascript that is injected into the Webview is generated in the `webview/` directory. Please see `webview/README.md` for more details.

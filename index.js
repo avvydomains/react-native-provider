@@ -1,8 +1,6 @@
 import React from 'react'
-import { Alert, View } from 'react-native'
+import { View } from 'react-native'
 import { WebView } from 'react-native-webview'
-import AVVY from '@avvy/client'
-import { ethers } from 'ethers'
 
 const getBody = require('./webview/dist/index.js')
 
@@ -35,15 +33,10 @@ class AvvyProvider extends React.Component {
     }
   }
 
-  init() {
-    const RPC_URL = this.props.RPC_URL || 'https://api.avax.network/ext/bc/C/rpc'
-    const provider = new ethers.providers.JsonRpcProvider(RPC_URL)
-    this.avvy = new AVVY(provider, {
-      poseidon: this.poseidon
-    })
-
-    if (this.props.ready) {
-      this.props.ready(this.avvy)
+  async init() {
+    let provider
+    if (this.props.poseidon) {
+      this.props.poseidon(this.poseidon)
     }
   }
 
@@ -69,7 +62,7 @@ class AvvyProvider extends React.Component {
 
   render() {
     return (
-      <View>
+      <>
         <WebView
           ref={(ref) => (this.webview = ref)}
           style={{
@@ -80,7 +73,7 @@ class AvvyProvider extends React.Component {
           injectedJavaScript={getBody()}
         />
         {this.props.children}
-      </View>
+      </>
     )
   }
 }
