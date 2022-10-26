@@ -57,6 +57,10 @@ class App extends React.Component {
 
 ```
 
+# Demo Project
+
+A functional demo project is available in the [Integration Examples Repository](https://github.com/avvydomains/integration-examples/tree/master/react-native).
+
 
 # Project Structure
 
