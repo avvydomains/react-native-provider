@@ -1,0 +1,23 @@
+{
+  "name": "@avvy/react-native-provider",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.js",
+  "module": "./index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react-native": "^0.70.3"
+  },
+  "devDependencies": {
+    "metro-react-native-babel-preset": "^0.73.2"
+  },
+  "dependencies": {
+    "@avvy/client": "^2.5.7",
+    "ethers": "^5.7.2"
+  }
+}
